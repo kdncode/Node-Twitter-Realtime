@@ -3,9 +3,15 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       mongoose = require('mongoose'),
       hbs = require('hbs'),
-      expressHbs = require('express-handlebars');
+      expressHbs = require('express-handlebars'),
+      config = require('./config/secret');
 
 const app = express();
+
+mongoose.connect(config.database, function(err) {
+    if (err) console.log(err);
+    console.log("Connected to the db")
+})
 
 app.engine('.hbs', expressHbs( { defaultLayout: 'layout', extname: '.hbs'}));
 
