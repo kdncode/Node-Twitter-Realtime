@@ -27,8 +27,8 @@ router.route('/signup')
                     // })
                 })
             }
-        })
-    })
+        });
+    });
 
 // Login Route
 router.route('/login')
@@ -41,11 +41,11 @@ router.route('/login')
         successRedirect: '/',
         failureRedirect: '/login',
         failureFlash: true
-    }))
+    }));
 
-router.get('/logout', (req, res, next) =>{
+router.get('/logout', (req, res, next) => {
     req.logout();
-    res.render('/')
-})
+    res.render('/');
+});
 
 module.exports = router;
