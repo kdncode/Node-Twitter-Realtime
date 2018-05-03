@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1>Signup</h1>
+
+        {{#if message }}
+            <div class="alert alert-danger alert-dimissible">
+                <button type="submit" class="close" data-dimiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {{/if}}
+
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+            <br>
+
+            <div style="text-align: center;">
+                <p>Already have an account?</p>
+                <a href="login" class="btn btn-primary">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
