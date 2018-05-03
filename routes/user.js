@@ -3,6 +3,7 @@ const passport = require('passport');
 const passportConfig = require('../config/passport');
 const User = require('../models/user');
 
+// Signup Route
 router.route('/signup')
     .get( ( req, res, next ) => {
         res.render('accounts/signup', { message: req.flash('errors') });
@@ -29,6 +30,7 @@ router.route('/signup')
         })
     })
 
+// Login Route
 router.route('/login')
     .get( (req, res, next ) => {
         if (req.user) res.redirect('/');
