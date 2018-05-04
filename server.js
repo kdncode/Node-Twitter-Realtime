@@ -52,7 +52,6 @@ const userRoutes = require('./routes/user');
 app.use(mainRoutes);
 app.use(userRoutes);
 
-
 http.listen(3030,( err ) => {
     if (err) console.log(err);
     console.log(`Server is running on port ${3030}`)
